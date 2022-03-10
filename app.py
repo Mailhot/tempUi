@@ -51,17 +51,15 @@ while True:
         # print(last_rows)
 
     else:
-        continue
-    # status_text.text("%i%% Complete" % i)
-    
+        continue    
         
     placeholder.empty()
     with placeholder.container():
 
         col1, col2 = st.columns(2)
 
-        col1.metric(label="Grill Temp", value=str(temp1) + " °C", delta="1.2 °C")
-        col2.metric(label="Meat Temp", value=str(temp2) + " °C", delta="-1.2 °C")
+        col1.metric(label="Grill Temp", value=str(temp1) + " °C", delta=grill_temp_diff + " °C")
+        col2.metric(label="Meat Temp", value=str(temp2) + " °C", delta=meat_temp_diff + " °C")
 
     # progress_bar.progress(i)
     # last_rows = new_rows
